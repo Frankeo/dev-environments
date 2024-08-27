@@ -4,6 +4,7 @@
 	"name": "Alpine",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "ghcr.io/cachix/devenv:v1.0.8",
+	"remoteUser": "root",
 	"customizations": {
 		"vscode": {
 			"extensions": [
