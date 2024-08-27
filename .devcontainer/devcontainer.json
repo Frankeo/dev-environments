@@ -3,10 +3,7 @@
 {
 	"name": "Alpine",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.20",
-	"features": {
-		"ghcr.io/devcontainers/features/nix:1": {}
-	},
+	"image": "ghcr.io/cachix/devenv:v1.0.8",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,7 +20,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "nix-env -iA devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable"
+	// "postCreateCommand": "nix-env -iA devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
