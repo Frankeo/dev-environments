@@ -20,7 +20,7 @@
   languages.javascript.package = pkgs.nodejs_20;
   languages.javascript.corepack.enable = true;
   languages.javascript.yarn.enable = true;
-  languages.javascript.yarn.package = pkgs.yarn-berry;
+  languages.javascript.yarn.package = pkgs.yarn;
 
   # https://devenv.sh/processes/
   # processes.cargo-watch.exec = "cargo-watch";
