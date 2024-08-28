@@ -2,13 +2,24 @@
 
 {
   # https://devenv.sh/basics/
-  env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [ 
+    pkgs.git 
+    pkgs.firebase-tools
+    pkgs.nodejs_20
+    pkgs.yarn-berry
+  ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
+
+  languages.javascript.enable = true;
+  languages.javascript.package = pkgs.nodejs_20;
+  languages.javascript.corepack.enable = true;
+  languages.javascript.yarn.enable = true;
+  languages.javascript.yarn.install.enable = true;
+  languages.javascript.yarn.package = pkgs.yarn-berry;
 
   # https://devenv.sh/processes/
   # processes.cargo-watch.exec = "cargo-watch";
@@ -17,19 +28,15 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo hello from $GREET
-  '';
 
   enterShell = ''
-    hello
-    git --version
+    echo hello
   '';
 
   # https://devenv.sh/tests/
   enterTest = ''
-    echo "Running tests"
-    git --version | grep --color=auto "${pkgs.git.version}"
+    git --version | grep --color=auto 2.44.0
+    firebase --version | grep --color=auto 13.6.1
   '';
 
   # https://devenv.sh/pre-commit-hooks/

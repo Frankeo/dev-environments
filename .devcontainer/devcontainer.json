@@ -8,8 +8,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"jnoortheen.nix-ide",
-				"tal7aouy.icons"
+				"tal7aouy.icons",
+				"pinage404.nix-extension-pack"
 			]
 		}
 	},
