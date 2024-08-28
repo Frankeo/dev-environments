@@ -15,7 +15,6 @@ dist/
 
 # dependencies
 node_modules/
-.yarn
 
 # logs
 npm-debug.log*
