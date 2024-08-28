@@ -11,10 +11,14 @@
         "tal7aouy.icons",
         "pinage404.nix-extension-pack",
         "astro-build.astro-vscode"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } }
+      }
     }
   },
-  "postCreateCommand": "direnv allow && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
+  "postCreateCommand": "config-omz.sh"
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},

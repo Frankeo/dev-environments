@@ -11,6 +11,7 @@
     pkgs.yarn
     pkgs.nil
     pkgs.nixpkgs-fmt
+    pkgs.oh-my-zsh
   ];
 
   # https://devenv.sh/languages/
