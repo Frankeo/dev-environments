@@ -33,19 +33,25 @@
   # https://devenv.sh/tests/
 
   # https://devenv.sh/pre-commit-hooks/
-  pre-commit.hooks.linting = {
-    enable = false;
+  pre-commit.hooks.commit-msg = {
+    enable = true;
 
     # The name of the hook (appears on the report table):
-    name = "Linting";
+    name = "Commit Message";
 
     # The command to execute (mandatory):
-    entry = "node --version";
+    entry = "yarn commitlint --edit";
 
     # The language of the hook - tells pre-commit
     # how to install the hook (default: "system")
     # see also https://pre-commit.com/#supported-languages
     language = "node";
+
+    stages = [ "commit-msg" ];
+
+    # Set this to false to not pass the changed files
+    # to the command (default: true):
+    pass_filenames = false;
   };
 
   # See full reference at https://devenv.sh/reference/options/
