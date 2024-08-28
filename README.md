@@ -8,7 +8,6 @@ Template for Astro pages with commands, tools and CI configuration needed to spi
 
 ### It contains
 
-- Husky
 - CommitLint
 - Prettier
 - EsLint
