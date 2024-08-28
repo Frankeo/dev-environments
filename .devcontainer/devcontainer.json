@@ -7,7 +7,11 @@
   "remoteUser": "root",
   "customizations": {
     "vscode": {
-      "extensions": ["tal7aouy.icons", "pinage404.nix-extension-pack"]
+      "extensions": [
+        "tal7aouy.icons",
+        "pinage404.nix-extension-pack",
+        "astro-build.astro-vscode"
+      ]
     }
   },
   "postCreateCommand": "direnv allow && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
