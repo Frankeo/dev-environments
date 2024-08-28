@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
-	"name": "Alpine",
+	"name": "DevEnv",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "ghcr.io/cachix/devenv:v1.0.8",
 	"remoteUser": "root",
@@ -10,13 +10,10 @@
 			"extensions": [
 				"tal7aouy.icons",
 				"pinage404.nix-extension-pack"
-			],
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "zsh",
-                "terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } }
-            }
+			]
 		}
 	},
+	"initializeCommand": "direnv allow && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

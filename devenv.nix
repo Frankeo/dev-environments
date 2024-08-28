@@ -9,7 +9,6 @@
     pkgs.firebase-tools
     pkgs.nodejs_20
     pkgs.yarn-berry
-    pkgs.oh-my-zsh
   ];
 
   # https://devenv.sh/languages/
