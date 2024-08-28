@@ -1,15 +1,15 @@
 {
-    "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
-    "nix.serverSettings": {
-        // settings for 'nil' LSP
-        "nil": {
-          "formatting": {
-            "command": ["nixpkgs-fmt"]
-          }
-        }
-      },
-      "debug.internalConsoleOptions": "neverOpen",
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+  "nix.serverSettings": {
+    // settings for 'nil' LSP
+    "nil": {
+      "formatting": {
+        "command": ["nixpkgs-fmt"]
+      }
+    }
+  },
+  "debug.internalConsoleOptions": "neverOpen",
   "stylelint.validate": ["astro"],
   "eslint.validate": [
     "javascript",

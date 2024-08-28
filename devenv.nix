@@ -70,7 +70,7 @@
 
     # Set this to false to not pass the changed files
     # to the command (default: true):
-    pass_filenames = true;
+    pass_filenames = false;
   };
 
   pre-commit.hooks.pre-push = {
@@ -91,7 +91,7 @@
 
     # Set this to false to not pass the changed files
     # to the command (default: true):
-    pass_filenames = true;
+    pass_filenames = false;
   };
   # See full reference at https://devenv.sh/reference/options/
 }

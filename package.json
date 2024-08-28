@@ -10,7 +10,7 @@
     "lint": "stylelint '**/*.astro' && eslint '**/*.{ts,astro}'",
     "test": "vitest",
     "pre-push": "yarn check-format && yarn lint && yarn test run",
-    "check-format": "prettier . --check",
+    "check-format": "prettier . --check --ignore-unknown",
     "preview": "astro preview",
     "astro": "astro",
     "husky-install": "husky install"
