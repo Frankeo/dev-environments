@@ -13,7 +13,7 @@
 			]
 		}
 	},
-	"initializeCommand": "direnv allow && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
+	"postCreateCommand": "direnv allow && echo 'eval \"$(direnv hook bash)\"' >> ~/.bashrc"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
