@@ -1,14 +1,16 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # https://devenv.sh/basics/
 
   # https://devenv.sh/packages/
-  packages = [ 
-    pkgs.git 
+  packages = [
+    pkgs.git
     pkgs.firebase-tools
     pkgs.nodejs_20
     pkgs.yarn-berry
+    pkgs.nil
+    pkgs.nixpkgs-fmt
   ];
 
   # https://devenv.sh/languages/
@@ -18,7 +20,6 @@
   languages.javascript.package = pkgs.nodejs_20;
   languages.javascript.corepack.enable = true;
   languages.javascript.yarn.enable = true;
-  languages.javascript.yarn.install.enable = true;
   languages.javascript.yarn.package = pkgs.yarn-berry;
 
   # https://devenv.sh/processes/
@@ -29,18 +30,23 @@
 
   # https://devenv.sh/scripts/
 
-  enterShell = ''
-    echo hello
-  '';
-
   # https://devenv.sh/tests/
-  enterTest = ''
-    git --version | grep --color=auto 2.44.0
-    firebase --version | grep --color=auto 13.6.1
-  '';
 
   # https://devenv.sh/pre-commit-hooks/
-  # pre-commit.hooks.shellcheck.enable = true;
+  pre-commit.hooks.linting = {
+    enable = false;
+
+    # The name of the hook (appears on the report table):
+    name = "Linting";
+
+    # The command to execute (mandatory):
+    entry = "node --version";
+
+    # The language of the hook - tells pre-commit
+    # how to install the hook (default: "system")
+    # see also https://pre-commit.com/#supported-languages
+    language = "node";
+  };
 
   # See full reference at https://devenv.sh/reference/options/
 }
