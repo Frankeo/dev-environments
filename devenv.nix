@@ -12,6 +12,8 @@
     pkgs.nil
     pkgs.nixpkgs-fmt
     pkgs.oh-my-zsh
+    pkgs.zsh-autosuggestions
+    pkgs.zsh-syntax-highlighting
   ];
 
   # https://devenv.sh/languages/
@@ -30,7 +32,10 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-
+  enterShell = ''
+    grep -Fq "zsh-syntax-highlighting.zsh" ~/.zshrc || echo "source $DEVENV_DOTFILE/profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+    grep -Fq "zsh-autosuggestions.zsh" ~/.zshrc || echo "source $DEVENV_DOTFILE/profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+  '';
   # https://devenv.sh/tests/
 
   # https://devenv.sh/pre-commit-hooks/
